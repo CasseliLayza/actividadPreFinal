@@ -133,9 +133,8 @@ function verificaOrderCuadros(array) {
     if (ordenInicial[i] !== ordenFinal[i]) {
       return array; // retorna array ordenado
     }
-
-    return true; // Si no se encontraron diferencias, los arreglos son iguales
   }
+  return true; // Si no se encontraron diferencias, los arreglos son iguales
 }
 
 console.log(verificaOrderCuadros(cuadros));
@@ -174,7 +173,7 @@ function verificaYDivide(a, b) {
   if (a != 0 && b != 0) {
     return a / b;
   } else {
-    return `Los valores incorrectos`;
+    return `Valores incorrectos, ambos deben ser distinto de 0`;
   }
 }
 
@@ -188,12 +187,10 @@ console.log(verificaYDivide(8, 2));
 */
 let mtz5X7 = () => {
   let mtzResoult = [];
-  let valor = 1;
   for (let i = 0; i < 5; i++) {
     mtzResoult[i] = [];
     for (let j = 1; j <= 7; j++) {
       mtzResoult[i].push(i * 10 + j);
-      // mtzResoult[i][j] = i * 10 + j;
     }
   }
   return mtzResoult;
@@ -207,7 +204,7 @@ console.table(mtz5X7());
 function sumatoriaFila4Mtrz(mtrz) {
   let sum = 0;
   for (let i = 0; i < mtrz.length; i++) {
-    if (i == 3) {
+    if (i == 3) {                                // Ya que se considera la matriz 5x7 la fila 4 es el item 3 
       for (let j = 0; j < mtrz[i].length; j++) {
         sum += mtrz[i][j];
       }
